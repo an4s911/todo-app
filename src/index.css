@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    @apply bg-[#f6f6f8] dark:bg-[#171721];
+}
+
+header {
+    background-image: url("./images/bg-mobile-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.dark header {
+    background-image: url("./images/bg-mobile-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.todolist-wrapper {
+    @apply flex flex-col w-full gap-8 text-gray-800 dark:text-gray-300;
+}
+
+.todolist-wrapper>div {
+    @apply rounded-lg bg-white dark:bg-[#25273c] w-full;
+}
+
+.new-todo {
+    @apply justify-center grid text-[#9ca3af] text-lg;
+    grid-template-columns: 30px 1fr;
+}
+
+.new-todo,
+.todo-item,
+.todo-filter,
+.todo-info {
+    @apply gap-4 p-5;
+}
+
+.new-todo input {
+    @apply h-full w-full outline-none align-middle;
+}
+
+.todo-list {
+    @apply flex flex-col w-full h-max;
+}
+
+.todo-item {
+    @apply grid h-full w-full p-5;
+    grid-template-columns: 30px 1fr 30px;
+}
+
+.todo-item:not(:last-child) {
+    @apply border-b-gray-500 border-b-[1px];
+}
+
+.todo-item.checked {
+    @apply text-[#9ca3af] line-through;
+}
+
+.todo-info {
+    @apply flex justify-between;
+}
+
+.todo-filter {
+    @apply grid grid-flow-col w-full gap-0 justify-center place-items-center;
+}
+
+.todo-filter > div {
+    @apply cursor-pointer relative font-bold px-2 align-middle h-full text-center;
+}
+
+.todo-filter>.current {
+    @apply text-blue-500;
+}
