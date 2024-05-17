@@ -29,6 +29,16 @@ header {
     background-position: center;
 }
 
+@media only screen and (min-width: 768px) {
+    header {
+        background-image: url("./images/bg-desktop-light.jpg");
+    }
+
+    .dark header {
+        background-image: url("./images/bg-desktop-dark.jpg");
+    }
+}
+
 .todolist-wrapper {
     @apply flex flex-col w-full gap-8 text-gray-800 dark:text-gray-300;
 }
@@ -47,6 +57,12 @@ header {
 .todo-filter,
 .todo-info {
     @apply gap-4 p-5;
+}
+
+.new-todo,
+.todo-list,
+.todo-filter {
+    @apply shadow-sm shadow-gray-900 dark:shadow-gray-700;
 }
 
 .new-todo input {
@@ -78,7 +94,7 @@ header {
     @apply grid grid-flow-col w-full gap-0 justify-center place-items-center;
 }
 
-.todo-filter > div {
+.todo-filter>div {
     @apply cursor-pointer relative font-bold px-2 align-middle h-full text-center;
 }
 

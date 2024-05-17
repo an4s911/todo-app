@@ -100,7 +100,7 @@ export default function TodoList() {
     };
 
     return (
-        <div className="absolute left-0 top-0 h-full w-full flex flex-col items-center mt-32 px-8">
+        <div className="absolute left-0 top-0 h-full w-full flex flex-col md:gap-12 items-center mt-32 md:mt-24 px-8 md:px-16 lg:px-48 xl:px-96">
             <div className="header flex items-center justify-between text-white gap-36 w-full">
                 <h1 className="title text-4xl font-bold tracking-widest pt-2">
                     TODO
