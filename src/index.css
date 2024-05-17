@@ -91,11 +91,11 @@ header {
 }
 
 .todo-filter {
-    @apply grid grid-flow-col w-full gap-0 justify-center place-items-center;
+    @apply grid grid-flow-col w-full gap-0 justify-center place-items-center lg:text-lg lg:gap-8;
 }
 
 .todo-filter>div {
-    @apply cursor-pointer relative font-bold px-2 align-middle h-full text-center;
+    @apply cursor-pointer relative font-bold px-2 align-middle h-full text-center lg:px-4 py-1;
 }
 
 .todo-filter>.current {
